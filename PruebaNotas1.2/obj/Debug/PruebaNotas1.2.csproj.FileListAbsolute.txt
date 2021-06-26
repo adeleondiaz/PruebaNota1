@@ -1,0 +1,6 @@
+C:\Users\noedi\Source\Repos\PruebaNota1\PruebaNotas1.2\bin\Debug\PruebaNotas1.2.dll
+C:\Users\noedi\Source\Repos\PruebaNota1\PruebaNotas1.2\bin\Debug\PruebaNotas1.2.pdb
+C:\Users\noedi\Source\Repos\PruebaNota1\PruebaNotas1.2\obj\Debug\PruebaNotas1.2.csproj.AssemblyReference.cache
+C:\Users\noedi\Source\Repos\PruebaNota1\PruebaNotas1.2\obj\Debug\PruebaNotas1.2.csproj.CoreCompileInputs.cache
+C:\Users\noedi\Source\Repos\PruebaNota1\PruebaNotas1.2\obj\Debug\PruebaNotas1.2.dll
+C:\Users\noedi\Source\Repos\PruebaNota1\PruebaNotas1.2\obj\Debug\PruebaNotas1.2.pdb

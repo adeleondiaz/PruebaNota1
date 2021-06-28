@@ -1,47 +1,67 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PruebaNotas1._2
+﻿namespace PruebaNotas1._2
 {
-    public class EstadisticasNotas  // esta clase nos calcula las estadísticas de un conjunto de notas
+    using System;
+    using System.Collections.Generic;
+
+    /// <summary>
+    ///  Clase nos calcula las estadísticas de un conjunto de notas.
+    /// </summary>
+    public class EstadisticasNotas  // 
     {
-        private int suspensos;  // Suspensos
-        private int aprobados;  // Aprobados
-        private int notables;  // Notables
-        private int sobresalientes;  // Sobresalientes
+        /// <summary>
+        /// Atributo que define los suspensos.
+        /// </summary>
+        private int suspensos;
 
-        private double media;  // Nota media
+        /// <summary>
+        /// Atributo que define los aprobados.
+        /// </summary>
+        private int aprobados;
 
-        public int Suspensos
-        {
-            get => suspensos;
-            set => suspensos = value;
-        }
-        public int Aprobados
-        {
-            get => aprobados;
-            set => aprobados = value;
-        }
-        public int Notables
-        {
-            get => notables;
-            set => notables = value;
-        }
-        public int Sobresalientes
-        {
-            get => sobresalientes;
-            set => sobresalientes = value;
-        }
-        public double Media
-        {
-            get => media;
-            set => media = value;
-        }
+        /// <summary>
+        /// Atributo que define los notables.
+        /// </summary>
+        private int notables;
+
+        /// <summary>
+        /// Atributo que define los sobresalientes.
+        /// </summary>
+        private int sobresalientes;
+
+        /// <summary>
+        /// Atributo que define la nota  media.
+        /// </summary>
+        private double media;
+
+        /// <summary>
+        /// Gets or sets the Suspensos.
+        /// </summary>
+        public int Suspensos { get => suspensos; set => suspensos = value; }
+
+        /// <summary>
+        /// Gets or sets the Aprobados.
+        /// </summary>
+        public int Aprobados { get => aprobados; set => aprobados = value; }
+
+        /// <summary>
+        /// Gets or sets the Notables.
+        /// </summary>
+        public int Notables { get => notables; set => notables = value; }
+
+        /// <summary>
+        /// Gets or sets the Sobresalientes.
+        /// </summary>
+        public int Sobresalientes { get => sobresalientes; set => sobresalientes = value; }
+
+        /// <summary>
+        /// Gets or sets the Media.
+        /// </summary>
+        public double Media { get => media; set => media = value; }
 
         // Constructor vacío
+        /// <summary>
+        /// Inicializa las variables de la clase <see cref="EstadisticasNotas"/>.
+        /// </summary>
         public EstadisticasNotas()
         {
             Suspensos = Aprobados = Notables = Sobresalientes = 0;  // inicializamos las variables
@@ -49,6 +69,10 @@ namespace PruebaNotas1._2
         }
 
         // Constructor a partir de un array, calcula las estadísticas al crear el objeto
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase <see cref="EstadisticasNotas"/> y calcula las estadísticas al crear el objeto.
+        /// </summary>
+        /// <param name="listaNota"> Valor del parámetro de tipo int que especifica una lista con las notas<see cref="List{int}"/>.</param>
         public EstadisticasNotas(List<int> listaNota)
         {
             Media = 0.0;
@@ -79,10 +103,16 @@ namespace PruebaNotas1._2
         }
 
 
-        // Para un conjunto de listnot, calculamos las estadísticas
-        // calcula la media y el número de suspensos/aprobados/notables/sobresalientes
-        //
-        // El método devuelve -1 si ha habido algún problema, la media en caso contrario	
+
+
+        // El método devuelve -1 si ha habido algún problema, la media en caso contrario
+        /// <summary>
+        ///Método que calcula las estadísticas para un conjunto de notas de la lista.
+        /// </summary>
+        /// <param name="listaNota">Valor del parámetro de tipo int que especifica una lista con las notas<see cref="List{int}"/>.</param>
+        /// <returns>Devuelve la media y el número de suspensos/aprobados/notables/sobresalientes</returns>
+        /// <exception cref="Exception">Lanza una excepción con una advertencia de "Error" si la lista  es menor o igual a cero</exception>
+        /// <exception cref="ArgumentOutOfRangeException"> Lanza esta excepción si las notas no se encuentran entre el mínimo y el máximo</exception>
         public double CalcularEstadisticas(List<int> listaNota)
         {
             Media = 0.0;
@@ -91,7 +121,7 @@ namespace PruebaNotas1._2
             //
             if (listaNota.Count <= 0)  // Si la lista no contiene elementos, devolvemos un error
             {
-                throw new ArgumentOutOfRangeException("Error, la lista no contiene elementos");
+                throw new Exception("Error, la lista no contiene elementos");
             }
 
             //return -1;

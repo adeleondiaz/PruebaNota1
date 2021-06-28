@@ -43,7 +43,7 @@ namespace PruebaNotaTest1._2
 
             catch
             {
-                throw new ArgumentOutOfRangeException("Error, la lista no contiene elementos");
+                throw new Exception("Error, la lista no contiene elementos");
             }
         }
 
